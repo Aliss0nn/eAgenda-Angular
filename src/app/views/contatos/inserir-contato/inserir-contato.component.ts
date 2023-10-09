@@ -8,6 +8,7 @@ import {
 import { ContatosService } from '../services/contatos.service';
 import { Router } from '@angular/router';
 import { FormsContatoViewModel } from '../models/forms-contato.view-model';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-inserir-contato',
@@ -21,7 +22,8 @@ export class InserirContatoComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private contatoService: ContatosService,
-    private router: Router
+    private router: Router,
+    private toastrService: ToastrService,
   ) {}
 
   ngOnInit(): void {
@@ -44,15 +46,31 @@ export class InserirContatoComponent implements OnInit {
 
   gravar() {
     if (this.form.invalid) {
+      for (let erro of this.form.validate()) {
+        this.toastrService.warning(erro);
+      }
+
       return;
     }
 
     this.contatoVM = this.form.value;
 
-    this.contatoService.inserir(this.contatoVM).subscribe((res) => {
-      console.log(res);
-
-      this.router.navigate(['/contatos/listar']);
+    this.contatoService.inserir(this.contatoVM).subscribe({
+      next: (contato: FormsContatoViewModel) => this.processarSucesso(contato),
+      error: (err: Error) => this.processarFalha(err),
     });
+  }
+
+  processarSucesso(contato: FormsContatoViewModel) {
+    this.toastrService.success(
+      `O contato "${contato.nome}" foi cadastrado com sucesso!`,
+      'Sucesso'
+    );
+
+    this.router.navigate(['/contatos/listar']);
+  }
+
+  processarFalha(erro: Error) {
+    this.toastrService.error(erro.message, 'Error');
   }
 }

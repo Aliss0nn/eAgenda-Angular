@@ -1,0 +1,30 @@
+<div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+  <div class="card-header">Compromisso</div>
+  <div class="card-body">
+    <p class="card-text">Assunto: {{compromisso.assunto}}.</p>
+    <p class="card-text" >Data: {{compromisso.data}}</p>
+    <p class="card-text">Hora Inicial: {{compromisso.horaInicio}}</p>
+    <p class="card-text">Hora final: {{compromisso.horaTermino}}</p>
+  </div>
+  <div class="d-flex gap-1 justify-content-end card-footer bg-transparent">
+    <button
+      class="btn btn-outline-primary rounded-5 py-2"
+      type="button"
+      routerLink="/compromissos/editar/{{compromisso.id}}"
+      aria-label="Editar"
+      ngbTooltip="Editar"
+      placement="bottom"
+    >
+      <i class="bi bi-pen"></i>
+    </button>
+    <button
+      class="btn btn-outline-primary rounded-5 py-2"
+      routerLink="/compromissos/excluir/{{compromisso.id}}"
+      aria-label="Excluir"
+      ngbTooltip="Excluir"
+      placement="bottom"
+    > 
+      <i class="bi bi-trash"></i>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+  <div class="card-header">Contato</div>
+  <div class="card-body">
+    <p class="card-text">Nome: {{contato.nome}}.</p>
+    <p class="card-text" >Telefone: {{contato.telefone}}</p>
+  </div>
+  <div class="d-flex gap-1 justify-content-end card-footer bg-transparent">
+    <button
+      class="btn btn-outline-primary rounded-5 py-2"
+      type="button"
+      routerLink="/contatos/editar/{{contato.id}}"
+      aria-label="Editar"
+      ngbTooltip="Editar"
+      placement="bottom"
+    >
+      <i class="bi bi-pen"></i>
+    </button>
+    <button
+      class="btn btn-outline-primary rounded-5 py-2"
+      routerLink="/contatos/excluir/{{contato.id}}"
+      aria-label="Excluir"
+      ngbTooltip="Excluir"
+      placement="bottom"
+    > 
+      <i class="bi bi-trash"></i>
+    </button>
+  </div>
+</div>
+ 

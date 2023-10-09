@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +10,7 @@ import { CoreModule } from './core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContatosModule } from './views/contatos/contatos.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CompromissosModule } from './views/compromissos/compromissos.module';
 
 @NgModule({
   // Componentes e diretivas que o Módulo Distribui
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
   // Importa metadados de outros módulos (incluindo bibliotecas)
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
 
@@ -31,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     CoreModule,
     DashboardModule,
     ContatosModule,
+    CompromissosModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
