@@ -9,6 +9,10 @@ import { ListarCompromissosComponent } from './views/compromissos/listar-comprom
 import { InserirCompromissoComponent } from './views/compromissos/inserir-compromisso/inserir-compromisso.component';
 import { EditarCompromissoComponent } from './views/compromissos/editar-compromisso/editar-compromisso.component';
 import { ExcluirCompromissosComponent } from './views/compromissos/excluir-compromissos/excluir-compromissos.component';
+import { ListarCategoriasComponent } from './views/categorias/listar-categorias/listar-categorias.component';
+import { InserirCategoriasComponent } from './views/categorias/inserir-categorias/inserir-categorias.component';
+import { EditarCategoriaComponent } from './views/categorias/editar-categoria/editar-categoria.component';
+import { ExcluirCategoriaComponent } from './views/categorias/excluir-categoria/excluir-categoria.component';
 
 const routes: Routes = [
   {
@@ -27,6 +31,10 @@ const routes: Routes = [
   {
     path: 'compromissos',
     loadChildren: () => import('./views/compromissos/compromissos.module').then((m) => m.CompromissosModule)
+  },
+  {
+    path: 'categorias',
+    loadChildren: () => import('./views/categorias/categorias.module').then((m) => m.CategoriasModule)
   },
 ];
 

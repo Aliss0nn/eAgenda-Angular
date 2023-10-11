@@ -18,13 +18,13 @@ export class ListarCompromissosComponent implements OnInit{
 
   ngOnInit(): void {
     this.route.data.pipe(map((dados) => dados['compromissos'])).subscribe({
-      next: (compromissos) => this.obterContatos(compromissos),
+      next: (compromissos) => this.obterCompromissos(compromissos),
       error: (erro) => this.processarFalha(erro),
     });
   }
 
-  obterContatos(contatos: listarCompromissoViewModel[]) {
-    this.compromissos = contatos;
+  obterCompromissos(compromissos: listarCompromissoViewModel[]) {
+    this.compromissos = compromissos;
   }
 
   processarFalha(erro: Error) {

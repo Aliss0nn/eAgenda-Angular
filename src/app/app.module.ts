@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ContatosModule } from './views/contatos/contatos.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CompromissosModule } from './views/compromissos/compromissos.module';
+import { CategoriasModule } from './views/categorias/categorias.module';
 
 @NgModule({
   // Componentes e diretivas que o Módulo Distribui
@@ -34,6 +35,7 @@ import { CompromissosModule } from './views/compromissos/compromissos.module';
     DashboardModule,
     ContatosModule,
     CompromissosModule,
+    CategoriasModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
