@@ -36,11 +36,11 @@ export class EditarDespesaComponent implements OnInit{
 
     console.log(this.idSelecionado)
 
-    this.despesaService.editar(this.despesa, this.idSelecionado!).subscribe(res => this.router.navigate(['despesa/listar']))
+    this.despesaService.editar(this.despesa, this.idSelecionado!).subscribe(res => this.router.navigate(['despesas/listar']))
   }
 
   excluir(){
-    this.despesaService.excluir(this.idSelecionado!).subscribe(res => this.router.navigate(['despesa/listar']));
+    this.despesaService.excluir(this.idSelecionado!).subscribe(res => this.router.navigate(['despesas/listar']));
   }
 
 

@@ -90,5 +90,4 @@ export class EditarCompromissoComponent implements OnInit
   processarFalha(erro: Error) {
     this.toastrService.error(erro.message, 'Error');
   }
-
 }

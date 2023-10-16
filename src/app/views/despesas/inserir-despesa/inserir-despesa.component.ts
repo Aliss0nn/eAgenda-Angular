@@ -32,7 +32,7 @@ export class InserirDespesaComponent implements OnInit{
 
     console.log(this.despesa);
 
-    this.despesaService.inserir(this.despesa).subscribe(res => this.route.navigate(['despesa/listar']));
+    this.despesaService.inserir(this.despesa).subscribe(res => this.route.navigate(['despesas/listar']));
   }
 
   ngOnInit(): void {
