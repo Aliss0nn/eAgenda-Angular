@@ -12,6 +12,7 @@ import { ContatosModule } from './views/contatos/contatos.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CompromissosModule } from './views/compromissos/compromissos.module';
 import { CategoriasModule } from './views/categorias/categorias.module';
+import { DespesasModule } from './views/despesas/despesas.module';
 
 @NgModule({
   // Componentes e diretivas que o Módulo Distribui
@@ -36,6 +37,7 @@ import { CategoriasModule } from './views/categorias/categorias.module';
     ContatosModule,
     CompromissosModule,
     CategoriasModule,
+    DespesasModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

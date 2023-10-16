@@ -13,6 +13,7 @@ import { ListarCategoriasComponent } from './views/categorias/listar-categorias/
 import { InserirCategoriasComponent } from './views/categorias/inserir-categorias/inserir-categorias.component';
 import { EditarCategoriaComponent } from './views/categorias/editar-categoria/editar-categoria.component';
 import { ExcluirCategoriaComponent } from './views/categorias/excluir-categoria/excluir-categoria.component';
+import { DespesasModule } from './views/despesas/despesas.module';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
     path: 'categorias',
     loadChildren: () => import('./views/categorias/categorias.module').then((m) => m.CategoriasModule)
   },
+  {
+    path: 'despesas',
+    loadChildren: () => import('./views/despesas/despesas.module').then((m) => m.DespesasModule)
+  }
 ];
 
 @NgModule({
