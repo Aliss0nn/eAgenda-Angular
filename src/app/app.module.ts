@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CompromissosModule } from './views/compromissos/compromissos.module';
 import { CategoriasModule } from './views/categorias/categorias.module';
 import { DespesasModule } from './views/despesas/despesas.module';
+import { RegistroModule } from './views/registro/registro.module';
+import { LoginModule } from './views/login/login.module';
 
 @NgModule({
   // Componentes e diretivas que o Módulo Distribui
@@ -34,6 +36,8 @@ import { DespesasModule } from './views/despesas/despesas.module';
     HttpClientModule,
     CoreModule,
     DashboardModule,
+    LoginModule,
+    RegistroModule,
     ContatosModule,
     CompromissosModule,
     CategoriasModule,
